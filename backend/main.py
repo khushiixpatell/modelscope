@@ -31,6 +31,177 @@ MODELS = {
     ),
 }
 
+@app.get("/schema")
+def get_schema():
+    return {
+        "features": {
+            "Age": {
+                "type": "number",
+                "min": 18,
+                "max": 100
+            },
+            "BusinessTravel": {
+                "type": "select",
+                "options": [
+                    "Travel_Rarely",
+                    "Travel_Frequently",
+                    "Non-Travel"
+                ]
+            },
+            "DailyRate": {
+                "type": "number"
+            },
+            "Department": {
+                "type": "select",
+                "options": [
+                    "Sales",
+                    "Research & Development",
+                    "Human Resources"
+                ]
+            },
+            "DistanceFromHome": {
+                "type": "number",
+                "min": 1
+            },
+            "Education": {
+                "type": "number",
+                "min": 1,
+                "max": 5
+            },
+            "EducationField": {
+                "type": "select",
+                "options": [
+                    "Life Sciences",
+                    "Medical",
+                    "Marketing",
+                    "Technical Degree",
+                    "Human Resources",
+                    "Other"
+                ]
+            },
+            "EnvironmentSatisfaction": {
+                "type": "number",
+                "min": 1,
+                "max": 4
+            },
+            "Gender": {
+                "type": "select",
+                "options": [
+                    "Male",
+                    "Female"
+                ]
+            },
+            "JobInvolvement": {
+                "type": "number",
+                "min": 1,
+                "max": 4
+            },
+            "JobLevel": {
+                "type": "number",
+                "min": 1,
+                "max": 5
+            },
+            "JobRole": {
+                "type": "select",
+                "options": [
+                    "Sales Executive",
+                    "Research Scientist",
+                    "Laboratory Technician",
+                    "Manufacturing Director",
+                    "Healthcare Representative",
+                    "Manager",
+                    "Sales Representative",
+                    "Research Director",
+                    "Human Resources"
+                ]
+            },
+            "JobSatisfaction": {
+                "type": "number",
+                "min": 1,
+                "max": 4
+            },
+            "MaritalStatus": {
+                "type": "select",
+                "options": [
+                    "Single",
+                    "Married",
+                    "Divorced"
+                ]
+            },
+            "MonthlyIncome": {
+                "type": "number",
+                "min": 0
+            },
+            "MonthlyRate": {
+                "type": "number",
+                "min": 0
+            },
+            "NumCompaniesWorked": {
+                "type": "number",
+                "min": 0
+            },
+            "OverTime": {
+                "type": "select",
+                "options": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            "PercentSalaryHike": {
+                "type": "number",
+                "min": 0
+            },
+            "PerformanceRating": {
+                "type": "number",
+                "min": 1,
+                "max": 5
+            },
+            "RelationshipSatisfaction": {
+                "type": "number",
+                "min": 1,
+                "max": 4
+            },
+            "StockOptionLevel": {
+                "type": "number",
+                "min": 0,
+                "max": 3
+            },
+            "TotalWorkingYears": {
+                "type": "number",
+                "min": 0
+            },
+            "TrainingTimesLastYear": {
+                "type": "number",
+                "min": 0
+            },
+            "WorkLifeBalance": {
+                "type": "number",
+                "min": 1,
+                "max": 4
+            },
+            "YearsAtCompany": {
+                "type": "number",
+                "min": 0
+            },
+            "YearsInCurrentRole": {
+                "type": "number",
+                "min": 0
+            },
+            "YearsSinceLastPromotion": {
+                "type": "number",
+                "min": 0
+            },
+            "YearsWithCurrManager": {
+                "type": "number",
+                "min": 0
+            },
+            "HourlyRate": {
+                "type": "number",
+                "min": 0
+            }
+        }
+    }
+
 def get_feature_names(model):
     preprocessor = model.named_steps["preprocessor"]
 
