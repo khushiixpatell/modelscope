@@ -6,7 +6,7 @@ ModelScope is an interactive machine learning platform for exploring how differe
 
 Instead of stopping at a prediction, ModelScope lets users compare multiple models, inspect prediction confidence, understand which features influenced an individual prediction, and simulate alternative inputs through counterfactual analysis.
 
-**Live Demo:** https://frontend-six-lac-60.vercel.app/
+**Live Demo:** https://modelscope-60.vercel.app/
 
 **API Documentation:** https://modelscope-wmbk.onrender.com/docs
 
